@@ -2,13 +2,17 @@
   "name": "cdk-sam-example",
   "version": "0.1.0",
   "bin": {
-    "cdk-sam-example": "bin/node-lambda-stack.js"
+    "cdk-sam-example": "cdk/bin/node-lambda-stack.js"
   },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
+    "start": "sam local start-api -p 5001",
     "test": "jest",
-    "cdk": "cdk synth > template.yml"
+    "synth": "cdk synth > template.yml",
+    "deploy": "cdk deploy",
+    "diff": "cdk diff",
+    "destroy": "cdk destroy"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",

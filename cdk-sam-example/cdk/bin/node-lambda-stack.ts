@@ -9,7 +9,7 @@ export class CdkSamExampleStack extends Stack {
     super(scope, id, props);
 
     const sampleLambda = new lambda.Function(this, "sampleHandler", {
-      code: lambda.Code.fromInline(join(__dirname, "../handlers/sample.handler.ts")),
+      code: lambda.Code.fromAsset(join(__dirname, "../../handlers")),
       runtime: lambda.Runtime.NODEJS_12_X,
       functionName: "sampleHandler",
       description: "a sample lambda function",

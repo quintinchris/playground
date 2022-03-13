@@ -69,6 +69,32 @@
                   "version": "2.16.0"
                 }
               },
+              "Code": {
+                "id": "Code",
+                "path": "CdkSamExampleStack/sampleHandler/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "CdkSamExampleStack/sampleHandler/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.16.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "CdkSamExampleStack/sampleHandler/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.16.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.16.0"
+                }
+              },
               "Resource": {
                 "id": "Resource",
                 "path": "CdkSamExampleStack/sampleHandler/Resource",
@@ -76,7 +102,10 @@
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
                     "code": {
-                      "zipFile": "C:\\dev\\playground\\cdk-sam-example\\handlers\\sample.handler.ts"
+                      "s3Bucket": {
+                        "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+                      },
+                      "s3Key": "2dd6a82e7c122a0f4cfe680c691ee288ed3a3aaf929155de8890483cb46c3e6f.zip"
                     },
                     "role": {
                       "Fn::GetAtt": [
