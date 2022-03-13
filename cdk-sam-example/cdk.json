@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/sample.stack.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/node-lambda-stack.ts",
   "watch": {
     "include": [
       "**"

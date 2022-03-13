@@ -2,7 +2,7 @@
   "name": "cdk-sam-example",
   "version": "0.1.0",
   "bin": {
-    "cdk-sam-example": "bin/sample.stack.js"
+    "cdk-sam-example": "bin/node-lambda-stack.js"
   },
   "scripts": {
     "build": "tsc",
@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "aws-cdk-lib": "^2.15.0",
-    "aws-lambda": "^1.0.7",
     "constructs": "^10.0.84",
     "source-map-support": "^0.5.16"
   }

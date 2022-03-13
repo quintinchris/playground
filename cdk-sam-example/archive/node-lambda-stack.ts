@@ -1,3 +1,4 @@
+// NOTE: make sure all aws-cdk-* deps have exact same version
 import * as cdk from "aws-cdk-lib";
 import { App, Stack, StackProps } from 'aws-cdk-lib';
 import * as lambda from "aws-cdk-lib/aws-lambda-nodejs";
