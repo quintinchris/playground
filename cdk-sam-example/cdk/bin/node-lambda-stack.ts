@@ -16,8 +16,11 @@ export class CdkSamExampleStack extends Stack {
       handler: "../handlers/sample.handler.ts",
     });
 
-    new aws_apigateway.LambdaRestApi(this, "myApi", {
+    new aws_apigateway.LambdaRestApi(this, "sampleAPI", {
+      description: "a sample API Gateway",
+      restApiName: "Sample API",
       handler: sampleLambda,
+      cloudWatchRole: true
     });
   }
 }
