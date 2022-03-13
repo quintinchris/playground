@@ -8,7 +8,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk synth > template.yml"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",
