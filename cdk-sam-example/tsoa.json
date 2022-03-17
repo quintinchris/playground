@@ -1,0 +1,12 @@
+{
+    "entryFile": "cdk/cdk-sam-example-spec.ts",
+    "noImplicitAdditionalProperties": "throw-on-extras",
+    "controllerPathGlobs": ["cdk/**/*cdk-sam-example-spec.ts"],
+    "spec": {
+      "outputDirectory": "build",
+      "specVersion": 3
+    },
+    "routes": {
+      "routesDir": "build"
+    }
+  }

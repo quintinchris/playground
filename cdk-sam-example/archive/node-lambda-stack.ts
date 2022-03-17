@@ -9,6 +9,7 @@ export class CdkSamExampleStack extends Stack {
   constructor(scope: App, id: string, props?: StackProps) {
     super(scope, id, props);
 
+    // WARNING - cdk would not compile this, kept having errors connecting to npm registry on docker...?
     const nodeLambda = new lambda.NodejsFunction(this, "sampleHandler", {
       functionName: "sampleHandler",
       entry: resolve(__dirname, "../handlers/sample.handler.ts"),

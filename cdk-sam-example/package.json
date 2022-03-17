@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "start": "sam local start-api -p 5001",
     "test": "jest",
-    "synth": "cdk synth > template.yml",
+    "synth": "tsoa spec && cdk synth > template.yml",
     "deploy": "cdk deploy",
     "diff": "cdk diff",
     "destroy": "cdk destroy"
@@ -27,6 +27,7 @@
   "dependencies": {
     "aws-cdk-lib": "^2.15.0",
     "constructs": "^10.0.84",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.16",
+    "tsoa": "^3.14.1"
   }
 }
