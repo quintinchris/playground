@@ -1,7 +1,7 @@
 {
-    "entryFile": "cdk/cdk-sam-example-spec.ts",
+    "entryFile": "cdk/node-lambda-stack-spec.ts",
     "noImplicitAdditionalProperties": "throw-on-extras",
-    "controllerPathGlobs": ["cdk/**/*cdk-sam-example-spec.ts"],
+    "controllerPathGlobs": ["cdk/**/*node-lambda-stack-spec.ts"],
     "spec": {
       "outputDirectory": "build",
       "specVersion": 3
