@@ -9,14 +9,14 @@ export class CdkSamExampleStack extends Stack {
     super(scope, id, props);
 
     const sampleLambda = new lambda.Function(this, "sampleHandler", {
-      code: lambda.Code.fromAsset(join(__dirname, "../../handlers")),
+      code: lambda.Code.fromAsset(`${resolve(__dirname)}/handlers`),
       runtime: lambda.Runtime.NODEJS_12_X,
       functionName: "sampleHandler",
       description: "a sample lambda function",
       handler: "../handlers/sample.handler.ts",
     });
 
-    new aws_apigateway.LambdaRestApi(this, "sampleAPI", {
+    const api = new aws_apigateway.LambdaRestApi(this, "sampleAPI", {
       description: "a sample API Gateway",
       restApiName: "Sample API",
       handler: sampleLambda,

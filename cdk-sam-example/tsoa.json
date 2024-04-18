@@ -1,0 +1,12 @@
+{
+    "entryFile": "cdk/node-lambda-stack-spec.ts",
+    "noImplicitAdditionalProperties": "throw-on-extras",
+    "controllerPathGlobs": ["cdk/**/*node-lambda-stack-spec.ts"],
+    "spec": {
+      "outputDirectory": "build",
+      "specVersion": 3
+    },
+    "routes": {
+      "routesDir": "build"
+    }
+  }
